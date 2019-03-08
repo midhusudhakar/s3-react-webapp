@@ -28,6 +28,10 @@ install:
   - npm i -g react-deploy-cli
   - npm run build #use your build script
 
-after_success:
-- chmod +x deploy.sh
-- "./deploy.sh"
+# after_success:
+# - chmod +x deploy.sh
+# - "./deploy.sh"
+
+deploy: 
+  provider: script
+  script: bash ./deploy.sh
