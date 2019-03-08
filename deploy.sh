@@ -14,12 +14,12 @@ if [[ $TRAVIS_BRANCH == $STAGING_BRANCH ]]; then
   NODE_ENV="staging"
   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_STAGING
   # TODO: Change this to the command that builds your app for staging
-  yarn build:staging
+  # yarn build:staging
 elif [[ $TRAVIS_BRANCH == $PRODUCTION_BRANCH ]]; then
   NODE_ENV="production"
   CLOUDFRONT_DIST_ID=$CLOUDFRONT_DIST_ID_PRODUCTION
   # TODO: Change this to the command that builds your app for production
-  yarn build:production
+  # yarn build:production
 else
   # Don't want to deploy if it's not one of the above branches
   echo "Not deploying"

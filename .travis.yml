@@ -25,7 +25,6 @@ cache:
     - node_modules
 install:
   - npm install
-  - npm i -g react-deploy-cli
   - npm run build #use your build script
 
 # after_success:
@@ -35,3 +34,5 @@ install:
 deploy: 
   provider: script
   script: bash ./deploy.sh
+  on: 
+    branch: master
